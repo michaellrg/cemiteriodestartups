@@ -3,9 +3,9 @@
 require_once 'connect.php'; 
     
 	$db_host = "localhost"; 
-	$db_user = "root";  
-	$db_pass = ''; 
-	$db_name = "startups";
+	$db_user = "cemiteri_test";  
+	$db_pass = 'PGV1478965$c$'; 
+	$db_name = "cemiteri_startups";
 
     $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
