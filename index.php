@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: text/html; charset=UTF-8');
 require_once 'configs/connect.php';
 require 'configs/custom.php';
 require 'configs/pagination.php';
@@ -7,10 +7,10 @@ require 'configs/pagination.php';
 ?> 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
@@ -61,12 +61,12 @@ require 'configs/pagination.php';
               <span class="text-muted">Total de startups cadastradas</span>
             </div>
             <div class="col-xs-12 col-sm-4 placeholder">
-              <h1><?php echo "$name_problem"; ?></h1>
+              <h1><?php echo utf8_encode("$name_problem"); ?></h1>
               <h4>Motivo</h4>
               <span class="text-muted">Maior motivo de morte de uma startup</span>
             </div>
             <div class="col-xs-12 col-sm-4 placeholder">
-              <h1><?php echo "$city"; ?></h1>
+              <h1><?php echo utf8_encode("$city"); ?></h1>
               <h4>Cidade</h4>
               <span class="text-muted">Cidade onde morrem mais startups</span>
             </div>
@@ -118,20 +118,21 @@ require 'configs/pagination.php';
 						$f10 = $row['date_fail'];
 						$f11 = $row['investiment'];
                         $f12 = $row['name_founder'];
+						$f13 = $row['url_founder'];
 						?>
                   <tr>
                     <td><?php echo $f1;?></td>
                     <!--<td><?php // echo $f2;?></td> -->
-                    <td><?php echo $f3;?></td>
-                    <td><?php echo $f4;?></td>
-                    <td><?php echo $f5;?></td>
+                    <td><?php echo utf8_encode($f3);?></td>
+                    <td><?php echo utf8_encode($f4);?></td>
+                    <td><?php echo utf8_encode($f5);?></td>
                     <td><?php echo $f6;?></td>
                     <td><?php echo $f7;?></td>
-                    <td><?php echo $f8;?></td>
+                    <td><?php echo utf8_encode($f8);?></td>
                     <td><?php echo $f9;?></td>
                     <td><?php echo $f10;?></td>
-                    <td><?php echo $f11;?></td>
-                    <td><?php echo $f12;?></td>
+                    <td><?php echo utf8_encode($f11);?></td>
+                    <td><?php echo "<a href='".$f13."'>".utf8_encode($f12)."</a>";?></td>
                       <?php
 						}
 					?>

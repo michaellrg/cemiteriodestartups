@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: text/html; charset=UTF-8');
 /*
  * @Author Rory Standley <rorystandley@gmail.com>
  * @Version 1.0
@@ -14,10 +14,10 @@ class Database{
 	 * Database class
 	 */
 
-	private $db_host = "localhost"; 
-	private $db_user = "root";  
-	private $db_pass = ''; 
-	private $db_name = "startups";
+	private $db_host = "192.95.43.212"; 
+	private $db_user = "cemiteri_test";  
+	private $db_pass = 'PGV1478965$c$'; 
+	private $db_name = "cemiteri_startups";
 	
 	/*
 	 * Extra variables that are required by other function such as boolean con variable

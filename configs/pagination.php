@@ -1,9 +1,9 @@
 <?php
-
-	$db_host = "localhost"; 
-	$db_user = "root";  
-	$db_pass = ''; 
-	$db_name = "startups";
+header('Content-Type: text/html; charset=UTF-8');
+	$db_host = "192.95.43.212"; 
+	$db_user = "cemiteri_test";  
+	$db_pass = 'PGV1478965$c$'; 
+	$db_name = "cemiteri_startups";
 
     $connect = mysql_connect($db_host,$db_user,$db_pass);
         if ($connect) {
