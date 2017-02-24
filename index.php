@@ -24,6 +24,7 @@ require 'configs/pagination.php';
 
   <!-- bootstrap widget theme -->
   <!-- <link rel="stylesheet" href="css/theme.bootstrap.css"> -->
+<<<<<<< HEAD
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesh../dist/css/bootstrap.min.csseet">
@@ -35,6 +36,19 @@ require 'configs/pagination.php';
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <!-- <script src="assets/js/ie-emulation-modes-warning.js"></script> -->
 
+=======
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesh../dist/css/bootstrap.min.csseet">
+
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!-- <script src="assets/js/ie-emulation-modes-warning.js"></script> -->
+
+>>>>>>> origin/master
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -90,6 +104,7 @@ require 'configs/pagination.php';
               <table class="tablesorter table-striped table-hover table-condensed table-responsive" id="desktop">
                 <thead>
                   <tr>
+<<<<<<< HEAD
                     <th class="visible-md visible-lg">#</th>
                     <!-- <th>Inclusão</th> -->
                     <th class="visible-xs visible-sm visible-md visible-lg">Startup</th>
@@ -105,6 +120,23 @@ require 'configs/pagination.php';
                   </tr>
                 </thead>
                 <tbody >
+=======
+                    <th>#</th>
+                    <!-- <th>Inclusão</th> -->
+                    <th>Startup</th>
+                    <th>Pitch</th>
+                    <th>Cidade</th>
+                    <th>UF</th>
+                    <th>Motivo</th>
+                    <th>Quote do empreendedor</th>
+                    <th>Born</th>
+                    <th>Fail</th>
+                    <th>Investimento</th>
+                    <th>Fundador</th>
+                  </tr>
+                </thead>
+                <tbody>
+>>>>>>> origin/master
 
                   <?php 
                   while($row = mysql_fetch_array($query)){
@@ -123,6 +155,7 @@ require 'configs/pagination.php';
                     $f13 = $row['url_founder'];
                     ?>
                     <tr>
+<<<<<<< HEAD
                       <td class="visible-md visible-lg" data-title="#"><?php echo $f1;?></td>
                       <!--<td><?php // echo $f2;?></td> -->
                       <td class="visible-xs visible-sm visible-md visible-lg" data-title="Startup"><?php echo utf8_encode($f3);?></td>
@@ -135,6 +168,66 @@ require 'configs/pagination.php';
                       <td class="visible-md visible-lg" data-title="Fail"><?php echo $f10;?></td>
                       <td class="visible-md visible-lg" data-title="Investimento"><?php echo utf8_encode($f11);?></td>
                       <td class="visible-xs visible-sm visible-md visible-lg" data-title="Fundador"><?php echo "<a href='".$f13."'>".utf8_encode($f12)."</a>";?></td>
+=======
+                      <td><?php echo $f1;?></td>
+                      <!--<td><?php // echo $f2;?></td> -->
+                      <td><?php echo utf8_encode($f3);?></td>
+                      <td><?php echo utf8_encode($f4);?></td>
+                      <td><?php echo utf8_encode($f5);?></td>
+                      <td><?php echo $f6;?></td>
+                      <td><?php echo $f7;?></td>
+                      <td><?php echo utf8_encode($f8);?></td>
+                      <td><?php echo $f9;?></td>
+                      <td><?php echo $f10;?></td>
+                      <td><?php echo utf8_encode($f11);?></td>
+                      <td><?php echo "<a href='".$f13."'>".utf8_encode($f12)."</a>";?></td>
+>>>>>>> origin/master
+                      <?php
+                    }
+                    ?>
+                  </tr>
+                </tbody>
+<<<<<<< HEAD
+              </table>
+              
+
+              
+=======
+              </table>
+              
+              <table class="table table-striped" id="mobile">
+                <thead>
+                  <tr>
+                    <th>Startup</th>
+                    <th>Motivo</th>
+                    
+                    <th>Fundador</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <?php 
+                  while($row = mysql_fetch_array($query)){
+                    $f1 = $row['id'];
+						//$f2 = $row['date_include'];
+                    $f3 = $row['name_startup'];
+                    $f4 = $row['pitch'];
+                    $f5 = $row['city'];
+                    $f6 = $row['state'];
+                    $f7 = $row['id_problem'];
+                    $f8 = $row['more_info'];
+                    $f9 = $row['date_born'];
+                    $f10 = $row['date_fail'];
+                    $f11 = $row['investiment'];
+                    $f12 = $row['name_founder'];
+                    $f13 = $row['url_founder'];
+                    ?>
+                    <tr>
+                      <td><?php echo utf8_encode($f3);?></td>
+                      <td><?php echo $f7;?></td>
+
+                      <td><?php echo "<a href='".$f13."'>".utf8_encode($f12)."</a>";?></td>
                       <?php
                     }
                     ?>
@@ -142,8 +235,7 @@ require 'configs/pagination.php';
                 </tbody>
               </table>
               
-
-              
+>>>>>>> origin/master
             </div>
 
 
