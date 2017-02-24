@@ -145,21 +145,34 @@ require 'configs/pagination.php';
                 <tr>
                     <th>Startup</th>
                     <th>Motivo</th>
+                    
                     <th>Fundador</th>
+                
                 </tr>
               </thead>
               <tbody>
                   
                   <?php 
 					while($row = mysql_fetch_array($query)){
+            $f1 = $row['id'];
+						//$f2 = $row['date_include'];
 						$f3 = $row['name_startup'];
+						$f4 = $row['pitch'];
+						$f5 = $row['city'];
+                        $f6 = $row['state'];
 						$f7 = $row['id_problem'];
+						$f8 = $row['more_info'];
+                        $f9 = $row['date_born'];
+						$f10 = $row['date_fail'];
+						$f11 = $row['investiment'];
                         $f12 = $row['name_founder'];
+						$f13 = $row['url_founder'];
 						?>
                 <tr>
-                    <td><?php echo $f3;?></td>
+                    <td><?php echo utf8_encode($f3);?></td>
                     <td><?php echo $f7;?></td>
-                    <td><?php echo $f12;?></td>
+                    
+                    <td><?php echo "<a href='".$f13."'>".utf8_encode($f12)."</a>";?></td>
                     <?php
 						}
 					?>
@@ -211,6 +224,15 @@ require 'configs/pagination.php';
             theme : 'blue',
             // sort on the first column and second column in ascending order
             sortList: [[0,0],[1,0]],
-  });</script>
+  });
+
+          $("#mobile").tablesorter({
+            theme : 'blue',
+            // sort on the first column and second column in ascending order
+            sortList: [[0,0],[1,0]],
+  });
+
+  
+  </script>
   </body>
 </html>
